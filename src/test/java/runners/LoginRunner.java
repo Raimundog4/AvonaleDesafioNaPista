@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		plugin = {"pretty", "html:target/cucumber-reports"},
 		features = "classpath:Features",
 		glue = "stepsDefinitions",
-		tags = "",
+		tags = "@EmailInvalido",
 		snippets = SnippetType.CAMELCASE,
 		monochrome = true,
 		dryRun = false
