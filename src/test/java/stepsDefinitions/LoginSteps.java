@@ -31,9 +31,8 @@ public class LoginSteps {
 	public void acionarOBotaoNaoParaAPeguntaDesejaHabilitarOUsoDaBiometria() {
 	}
 	
-
 	@Entao("o sistema ira apresentar a mensagem Informativo Login ou senha incorretos")
 	public void oSistemaIraApresentarAMensagemInformativoLoginOuSenhaIncorretos() {
 	}
-
+	
 }
