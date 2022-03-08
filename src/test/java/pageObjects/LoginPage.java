@@ -43,6 +43,18 @@ public class LoginPage {
 	@AndroidFindBy(accessibility = "Informativo\nLogin ou senha incorretos")
 	private MobileElement mensagemUsuarioOuSenhaInvalido;
 	
+	@AndroidFindBy(xpath = "(//android.widget.ImageView)[1]")
+	private MobileElement menuHamburguer;
+	
+	@AndroidFindBy(xpath = "//android.widget.EditText[@text='O que você procura?']")
+	private MobileElement campoPesquisa;
+	
+	@AndroidFindBy(xpath = "(//android.view.View[@index='2'])[1]")
+	private MobileElement botaoFiltro;
+	
+	@AndroidFindBy(accessibility = "Conheça as ofertas mais bem avaliadas do naPista")
+	private MobileElement textoDeOfertas;
+	
 	public void acionarBotaoPermitir() throws Exception {
 		for (int i = 1; i <= 3; i++) {
 			Utils.esperarElemento(2000);
@@ -88,5 +100,13 @@ public class LoginPage {
 	public void validarUsuarioOuSenhaInvalido() throws Exception {
 		Utils.esperarElemento(2000);
 		assertTrue("A mensagem informando que o usuário ou senha estão inválidos não apareceu", mensagemUsuarioOuSenhaInvalido.isDisplayed());
+	}
+	
+	public void validarLoginRealizadoComSucesso() throws Exception {
+		Utils.esperarElemento(10000);
+		assertTrue("Login não realizado!", menuHamburguer.isDisplayed()
+				&& campoPesquisa.isDisplayed()
+				&& botaoFiltro.isDisplayed()
+				&& textoDeOfertas.isDisplayed());
 	}
 }

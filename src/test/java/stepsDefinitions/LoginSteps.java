@@ -50,4 +50,9 @@ public class LoginSteps {
 		lp.validarUsuarioOuSenhaInvalido();
 	}
 
+	@Entao("^o sistema ira apresentar a tela com as ofertas do NaPista$")
+	public void oSistemaIraApresentarATelaComAsOfertasDoNaPista() throws Exception {
+		lp.validarLoginRealizadoComSucesso();
+	}
+
 }

@@ -31,7 +31,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Senha Inv�lida",
+  "name": "Login Realizado com sucesso",
   "description": "",
   "keyword": "Cenario",
   "tags": [
@@ -42,7 +42,7 @@ formatter.scenario({
       "name": "@End2End"
     },
     {
-      "name": "@SenhaInvalida"
+      "name": "@LoginRealizadoComSucesso"
     }
   ]
 });
@@ -67,7 +67,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "preencher o campo Senha como \"12345678\"",
+  "name": "preencher o campo Senha como \"123qwe\"",
   "keyword": "E "
 });
 formatter.match({
@@ -97,11 +97,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "o sistema ira apresentar a mensagem Informativo Login ou senha incorretos",
+  "name": "o sistema ira apresentar a tela com as ofertas do NaPista",
   "keyword": "Entao "
 });
 formatter.match({
-  "location": "LoginSteps.oSistemaIraApresentarAMensagemInformativoLoginOuSenhaIncorretos()"
+  "location": "LoginSteps.oSistemaIraApresentarATelaComAsOfertasDoNaPista()"
 });
 formatter.result({
   "status": "passed"
