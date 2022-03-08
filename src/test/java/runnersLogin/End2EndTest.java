@@ -12,11 +12,11 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		plugin = {"pretty", "html:target/cucumber-reports"},
 		features = "classpath:Features",
 		glue = "stepsDefinitions",
-		tags = "@UsuariolInvalido",
+		tags = "@End2End",
 		snippets = SnippetType.CAMELCASE,
 		monochrome = true,
 		dryRun = false
 		)
-public class UsuariolInvalidoTest {
+public class End2EndTest {
 
 }

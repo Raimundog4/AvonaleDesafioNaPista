@@ -6,7 +6,7 @@ Funcionalidade: Login
   Contexto: 
     Dado que o usuario esteja na tela principal do aplicativo
 
-  @UsuariolInvalido
+  @UsuarioInvalido
   Cenario: Usuário Inválido
     Quando o usuario acionar a opcao Ja tenho conta
     E preencher o campo Seu e-mail como "comprador@hotmail.com"
