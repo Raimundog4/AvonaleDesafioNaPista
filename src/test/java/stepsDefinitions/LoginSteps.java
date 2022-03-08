@@ -47,7 +47,7 @@ public class LoginSteps {
 	
 	@Entao("o sistema ira apresentar a mensagem Informativo Login ou senha incorretos")
 	public void oSistemaIraApresentarAMensagemInformativoLoginOuSenhaIncorretos() throws Exception {
-		lp.validarUsuarioOuSenhaInvalido();
+		lp.validarUsuarioOuSenhaIncorretos();
 	}
 
 	@Entao("^o sistema ira apresentar a tela com as ofertas do NaPista$")

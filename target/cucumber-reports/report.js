@@ -42,7 +42,7 @@ formatter.scenario({
       "name": "@End2End"
     },
     {
-      "name": "@UsuariolInvalido"
+      "name": "@UsuarioInvalido"
     }
   ]
 });

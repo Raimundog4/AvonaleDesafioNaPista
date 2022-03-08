@@ -41,7 +41,7 @@ public class LoginPage {
 	private MobileElement botaoNaoHabilitarDigital;
 	
 	@AndroidFindBy(accessibility = "Informativo\nLogin ou senha incorretos")
-	private MobileElement mensagemUsuarioOuSenhaInvalido;
+	private MobileElement mensagemUsuarioOuSenhaIncorretos;
 	
 	@AndroidFindBy(xpath = "(//android.widget.ImageView)[1]")
 	private MobileElement menuHamburguer;
@@ -103,13 +103,13 @@ public class LoginPage {
 		botaoNaoHabilitarDigital.click();
 	}
 	
-	public void validarUsuarioOuSenhaInvalido() throws Exception {
+	public void validarUsuarioOuSenhaIncorretos() throws Exception {
 		Utils.esperarElemento(2000);
-		assertTrue("A mensagem informando que o usuário ou senha estão inválidos não apareceu", mensagemUsuarioOuSenhaInvalido.isDisplayed());
+		assertTrue("A mensagem informando que o usuário ou senha estão incorretos não apareceu", mensagemUsuarioOuSenhaIncorretos.isDisplayed());
 	}
 	
 	public void validarLoginRealizadoComSucesso() throws Exception {
-		Utils.esperarElemento(10000);
+		Utils.esperarElemento(20000);
 		assertTrue("Login não realizado!", menuHamburguer.isDisplayed()
 				&& campoPesquisa.isDisplayed()
 				&& botaoFiltro.isDisplayed()
