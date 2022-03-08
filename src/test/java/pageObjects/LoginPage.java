@@ -55,6 +55,12 @@ public class LoginPage {
 	@AndroidFindBy(accessibility = "Conheça as ofertas mais bem avaliadas do naPista")
 	private MobileElement textoDeOfertas;
 	
+	@AndroidFindBy(accessibility = "Acho que você esqueceu seu login ou sua senha")
+	private MobileElement mensagemSugerindoRecuperarSenha;
+	
+	@AndroidFindBy(accessibility = "Recuperar minha senha")
+	private MobileElement botaoRecuperarMinhaSenha;
+	
 	public void acionarBotaoPermitir() throws Exception {
 		for (int i = 1; i <= 3; i++) {
 			Utils.esperarElemento(2000);
@@ -108,5 +114,11 @@ public class LoginPage {
 				&& campoPesquisa.isDisplayed()
 				&& botaoFiltro.isDisplayed()
 				&& textoDeOfertas.isDisplayed());
+	}
+	
+	public void validarMensagemSugerindoRecuperarSenha() throws Exception {
+		Utils.esperarElemento(10000);
+		assertTrue("A mensagem sugerindo a recuperação da senha não foi exibida!", mensagemSugerindoRecuperarSenha.isDisplayed()
+				&& botaoRecuperarMinhaSenha.isDisplayed());
 	}
 }

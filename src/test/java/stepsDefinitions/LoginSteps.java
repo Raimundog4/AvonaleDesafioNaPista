@@ -55,4 +55,9 @@ public class LoginSteps {
 		lp.validarLoginRealizadoComSucesso();
 	}
 
+	@Entao("^o sistema ira apresentar o botao Recuperar  minha senha com a mensagem Acho que voce esqueceu seu login ou sua senha$")
+	public void oSistemaIraApresentarOBotaoRecuperarMinhaSenhaComAMensagemAchoQueVoceEsqueceuSeuLoginOuSuaSenha() throws Exception {
+		lp.validarMensagemSugerindoRecuperarSenha();
+	}
+
 }

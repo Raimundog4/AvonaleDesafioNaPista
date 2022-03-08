@@ -31,7 +31,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Login Realizado com sucesso",
+  "name": "Tr�s tentativas seguidas de fazer login com usu�rio ou senha incorretos - mensagem para recuperar a senha",
   "description": "",
   "keyword": "Cenario",
   "tags": [
@@ -42,7 +42,7 @@ formatter.scenario({
       "name": "@End2End"
     },
     {
-      "name": "@LoginRealizadoComSucesso"
+      "name": "@MensagemSugestivaParaRecuperarASenha"
     }
   ]
 });
@@ -67,7 +67,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "preencher o campo Senha como \"123qwe\"",
+  "name": "preencher o campo Senha como \"12345678\"",
   "keyword": "E "
 });
 formatter.match({
@@ -97,11 +97,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "o sistema ira apresentar a tela com as ofertas do NaPista",
+  "name": "acionar o botao Acessar conta",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "LoginSteps.acionarOBotaoAcessarConta()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "acionar o botao Nao para a pegunta Deseja Habilitar o uso da biometria?",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "LoginSteps.acionarOBotaoNaoParaAPeguntaDesejaHabilitarOUsoDaBiometria()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "acionar o botao Acessar conta",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "LoginSteps.acionarOBotaoAcessarConta()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "acionar o botao Nao para a pegunta Deseja Habilitar o uso da biometria?",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "LoginSteps.acionarOBotaoNaoParaAPeguntaDesejaHabilitarOUsoDaBiometria()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o sistema ira apresentar o botao Recuperar  minha senha com a mensagem Acho que voce esqueceu seu login ou sua senha",
   "keyword": "Entao "
 });
 formatter.match({
-  "location": "LoginSteps.oSistemaIraApresentarATelaComAsOfertasDoNaPista()"
+  "location": "LoginSteps.oSistemaIraApresentarOBotaoRecuperarMinhaSenhaComAMensagemAchoQueVoceEsqueceuSeuLoginOuSuaSenha()"
 });
 formatter.result({
   "status": "passed"
