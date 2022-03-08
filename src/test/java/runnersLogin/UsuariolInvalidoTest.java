@@ -1,4 +1,4 @@
-package runners;
+package runnersLogin;
 
 import org.junit.runner.RunWith;
 
@@ -12,11 +12,11 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		plugin = {"pretty", "html:target/cucumber-reports"},
 		features = "classpath:Features",
 		glue = "stepsDefinitions",
-		tags = "@EmailInvalido",
+		tags = "@UsuariolInvalido",
 		snippets = SnippetType.CAMELCASE,
 		monochrome = true,
 		dryRun = false
 		)
-public class LoginRunner {
+public class UsuariolInvalidoTest {
 
 }
